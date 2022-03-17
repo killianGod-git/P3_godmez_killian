@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Shrikhand&display=swap");
 html {
   font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 
 header {
@@ -18,7 +19,97 @@ h1, h2, h3, p {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  font-size: 16px;
+  background-color: #EAEAEA;
+  padding: 10px 0;
+}
+
+.reservation {
+  background-color: #F6F6F6;
+  text-align: center;
+  padding: 30px 15px;
+}
+.reservation h2, .reservation p {
+  margin: 10px 0;
+}
+.reservation button {
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 25px;
   font-size: 13px;
+}
+
+.fonctionnement {
+  padding: 10px;
+}
+.fonctionnement-section {
+  display: flex;
+  flex-direction: column;
+}
+.fonctionnement_card {
+  display: flex;
+  background-color: #F6F6F6;
+  margin: 15px 20px;
+  padding: 15px;
+  padding-left: 30px;
+  gap: 20px;
+  border-radius: 20px;
+  position: relative;
+}
+.fonctionnement_card .chiffre {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  background-color: #9356DC;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.fonctionnement_card p {
+  font-weight: 500;
+}
+.fonctionnement_card:hover {
+  background-color: #F5EDFF;
+}
+.fonctionnement_card:hover i {
+  color: #9356DC;
+}
+
+.restaurant {
+  padding: 10px;
+}
+.restaurant_section {
+  width: 95%;
+  margin: 0 auto;
+}
+.restaurant_section img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .fonctionnement-section {
+    flex-direction: row;
+    gap: 20px;
+    margin: 20px 5px;
+  }
+  .fonctionnement_card {
+    margin: 0;
+    padding: 10px 0 10px 40px;
+    flex-basis: 33%;
+    gap: 5px;
+  }
+  .fonctionnement_card .chiffre {
+    width: 35px;
+    height: 35px;
+    transform: translate(0, -50%);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
