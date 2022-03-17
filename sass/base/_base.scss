@@ -1,0 +1,18 @@
+html{
+    font-family: $font-defaut;
+}
+header{
+    text-align: center;
+    font-size: 20px;
+    font-family: $font-titre;
+}
+h1, h2, h3, p{
+    margin: 0;
+}
+.localisation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
