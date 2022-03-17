@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Shrikhand&display=swap");
 html {
   font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 
 header {
@@ -18,7 +19,57 @@ h1, h2, h3, p {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  font-size: 16px;
+  background-color: #EAEAEA;
+  padding: 10px 0;
+}
+
+.reservation {
+  background-color: #F6F6F6;
+  text-align: center;
+  padding: 30px 15px;
+}
+.reservation h2, .reservation p {
+  margin: 10px 0;
+}
+.reservation button {
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 25px;
   font-size: 13px;
+}
+
+.fonctionnement {
+  padding: 10px;
+}
+.fonctionnement_card {
+  display: flex;
+  justify-content: center;
+  background-color: #F6F6F6;
+  margin: 15px 20px;
+  padding: 15px;
+  gap: 20px;
+  border-radius: 25px;
+  position: relative;
+}
+.fonctionnement_card .chiffre {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  background-color: #9356DC;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.fonctionnement_card p {
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=style.css.map */
