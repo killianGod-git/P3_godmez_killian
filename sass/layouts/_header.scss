@@ -1,0 +1,32 @@
+header{
+    text-align: center;
+    font-size: 20px;
+    font-family: $font-titre;
+}
+.localisation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    background-color: #EAEAEA;
+    padding: 10px 0;
+}
+.reservation{
+    background-color: $colour-fond;
+    text-align: center;
+    padding: 30px 15px;
+    h2 , p{
+        margin: 10px 0;
+    }
+    button{
+        background: linear-gradient($colour-secondary, $colour-primary);
+        color: #fff;
+        border: none;
+        padding: 15px;
+        border-radius: 25px;
+        font-size: 13px;
+    }
+}
+
+
