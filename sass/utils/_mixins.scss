@@ -2,7 +2,7 @@
     padding: 10px;
 }
 
-@mixin heading-shadow($colour: fond-gris($colour)){
+@mixin fond-sombre($colour: fond-gris($colour)){
     background-color: $colour;
     
   }

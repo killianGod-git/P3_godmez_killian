@@ -13,7 +13,7 @@ header{
     padding: 10px 0;
 }
 .reservation{
-    background-color: $colour-fond;
+    @include fond-sombre;
     text-align: center;
     padding: 30px 15px;
     h2 , p{
