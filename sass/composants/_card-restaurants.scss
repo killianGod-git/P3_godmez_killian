@@ -1,0 +1,11 @@
+.restaurant{
+    @include pad10;
+    &_section{
+        width: 95%;
+        margin: 0 auto;
+        background-color: #fff;
+        img {
+            width: 100%;
+        }
+    }
+}

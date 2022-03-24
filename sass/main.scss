@@ -1,2 +1,8 @@
 @import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/fonctions";
 @import "./base/base";
+@import "./layouts/header.scss";
+@import "./composants/section-fonctionnement";
+@import "./composants/card-restaurants";
+@import "./pages/menu";

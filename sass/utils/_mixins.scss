@@ -1,0 +1,10 @@
+@mixin pad10 {
+    padding: 10px;
+}
+
+@mixin fond-sombre($colour: fond-gris($colour)){
+    background-color: $colour;
+    
+  }
+
+
