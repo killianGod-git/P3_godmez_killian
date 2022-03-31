@@ -1,11 +1,76 @@
+@use "../utils/mixins" as * ;
+@use "../utils/variables" as *;
 .restaurant{
     @include pad10;
+    @include fond-sombre;
+    h2{
+        margin: 50px 0 0 15px;
+        @include tablet-screen{
+            text-align: center;
+            margin: 50px 0 0 0;
+        }
+    }
     &_section{
         width: 95%;
         margin: 0 auto;
-        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        @include tablet-screen{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
         img {
             width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            object-fit: cover;
+            height: 30vh;
+            top: 0;
+            
+            @include tablet-screen{
+                height: 20vh;
+            }
+            @include desktop-screen{
+                height: 40vh;
+            }        
+        }
+        .position{
+            object-position: 20% 60%;
         }
     }
+    &_card{
+        border-radius: 15px;
+        margin: 20px 0;
+        position: relative;
+        background-color: $colour;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+        @include tablet-screen{
+            flex-basis: 45%;
+        }
+        .description{
+            margin: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            i{
+                font-size: 40px;
+            }
+            .info{
+                font-size: 25px;
+                margin-bottom: 10px;
+            }
+        } 
+    }
+    &_img{
+        p{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: $colour-tertiaire;
+        color: darken($colour-tertiaire, 50%);
+        padding: 7px 20px;
+        border-radius: 5px;
+    }
+}
 }

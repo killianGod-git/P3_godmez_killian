@@ -1,7 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Shrikhand&display=swap');
 
-
 $colour-primary: #9356DC;
 $colour-secondary: #FF79DA;
 $colour-tertiaire: #99E2D0;
@@ -11,3 +10,8 @@ $colour : #fff;
 
 $font-titre : 'Shrikhand', cursive;
 $font-defaut : 'Roboto', sans-serif;
+
+$breakpoints: (
+    tablet: 767px,
+    desktop: 992px
+);

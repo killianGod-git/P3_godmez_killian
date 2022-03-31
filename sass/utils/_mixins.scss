@@ -1,10 +1,20 @@
-@mixin pad10 {
+@use "./fonctions" as *;
+@use "./variables" as *;
+@mixin pad10{
     padding: 10px;
 }
 
 @mixin fond-sombre($colour: fond-gris($colour)){
     background-color: $colour;
-    
   }
 
-
+@mixin tablet-screen {
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        @content;
+    }
+}
+@mixin desktop-screen{
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        @content;
+    }
+}
