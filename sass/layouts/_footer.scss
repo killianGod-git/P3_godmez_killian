@@ -1,0 +1,25 @@
+@use "../utils/mixins" as m;
+@use "../utils/variables" as v;
+
+
+footer{
+    background-color: v.$colourdark;
+    color: v.$colour;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px  20px ;
+    @include m.tablet-screen{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    i{
+        margin-right: 5px;
+    }
+    a{
+        color: v.$colour;
+        text-decoration: none;
+    }
+}

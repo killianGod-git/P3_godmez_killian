@@ -1,25 +1,31 @@
-@use "../utils/mixins" as * ;
-@use "../utils/variables" as *;
-.restaurant{
-    @include pad10;
-    @include fond-sombre;
-    h2{
+@use "../utils/mixins"as m;
+@use "../utils/variables"as v;
+
+.restaurant {
+    @include m.pad10;
+    @include m.fond-sombre;
+
+    h2 {
         margin: 50px 0 0 15px;
-        @include tablet-screen{
+
+        @include m.tablet-screen {
             text-align: center;
             margin: 50px 0 0 0;
         }
     }
-    &_section{
+
+    &_section {
         width: 95%;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
-        @include tablet-screen{
+
+        @include m.tablet-screen {
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-evenly;
         }
+
         img {
             width: 100%;
             border-top-left-radius: 10px;
@@ -27,50 +33,65 @@
             object-fit: cover;
             height: 30vh;
             top: 0;
-            
-            @include tablet-screen{
+
+            @include m.tablet-screen {
                 height: 20vh;
             }
-            @include desktop-screen{
-                height: 40vh;
-            }        
         }
-        .position{
+
+        .position {
             object-position: 20% 60%;
         }
     }
-    &_card{
+
+    &_card {
         border-radius: 15px;
         margin: 20px 0;
         position: relative;
-        background-color: $colour;
-        box-shadow: 0 3px 6px rgba(0,0,0,0.23);
-        @include tablet-screen{
+        background-color: v.$colour;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+
+        @include m.tablet-screen {
             flex-basis: 45%;
         }
-        .description{
+
+        @include m.desktop-screen {
+            flex-basis: 22%;
+        }
+
+        .description {
             margin: 10px 20px;
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            i{
-                font-size: 40px;
+            align-items: flex-start;
+
+            i {
+                font-size: 20px;
+                color: #000;
+                margin-top: 3px;
             }
-            .info{
+
+            .info {
                 font-size: 25px;
                 margin-bottom: 10px;
+                color: #000;
             }
-        } 
+        }
     }
-    &_img{
-        p{
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        background-color: $colour-tertiaire;
-        color: darken($colour-tertiaire, 50%);
-        padding: 7px 20px;
-        border-radius: 5px;
+
+    &_img {
+        p {
+            font-size: 1rem;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: v.$colour-tertiaire;
+            color: darken(v.$colour-tertiaire, 50%);
+            padding: 7px 20px;
+            border-radius: 5px;
+            @include m.tablet-screen{
+                font-size: 0.7rem;
+            }
+        }
     }
-}
 }
