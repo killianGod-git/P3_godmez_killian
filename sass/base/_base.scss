@@ -1,9 +1,38 @@
-@use "../utils/variables" as *;
-@use "../utils/variables" as *;
+@use "../utils/variables" as v;
+@use "../utils/mixins" as m;
 html{
-    font-family: $font-defaut;
+    font-family: v.$font-defaut;
     font-weight: 300;
+    font-size: 10px;
+    @include m.tablet-screen{
+        font-size: 12px;
+    }
+    @include m.desktop-screen{
+        font-size: 14px;
+    }
+}
+*{
+    text-decoration: none;
 }
 h1, h2, h3, p{
     margin: 0;
+}
+h1{
+    font-size: 4rem;
+    
+}
+h2, h3{
+    font-size: 2rem;
+    @include m.tablet-screen{
+        font-size: 1.2rem;
+    }
+}
+p{
+    font-size: 1.5rem;
+    @include m.tablet-screen{
+        font-size: 1rem;
+    }
+}
+.font_logo{
+    font-family: v.$font-titre;
 }
