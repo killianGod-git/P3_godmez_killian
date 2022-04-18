@@ -3,7 +3,12 @@
 @mixin pad10{
     padding: 10px;
 }
+@mixin text-points{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 
+}
 @mixin fond-sombre($colour: fond-gris($colour)){
     background-color: $colour;
   }

@@ -18,7 +18,7 @@
         display: flex;
         flex-direction: column;
         margin: 10px;
-        @include m.tablet-screen{
+        @include m.desktop-screen{
             flex-direction: row;
             justify-content: space-evenly;
         }
@@ -58,7 +58,15 @@
             }
         }
     }
-
+    &_plat{
+        width: 85%;
+        h3, p{
+            @include m.text-points
+        }
+    }
+    &_prix{
+        width: 10%;
+    }
     &_choix {
         display: flex;
         justify-content: space-between;
@@ -68,13 +76,14 @@
         margin: 15px 0;
         overflow: hidden;
         text-align: initial;
+        height: 90px;
         .menu_checked {
             background-color: v.$colour-tertiaire;
             display: flex;
             align-items: center;
             justify-content: center;
             transition-duration: .5s;
-            padding: 40px;
+            padding: 50px 30px;
             i{
                 color: v.$colour-tertiaire;
                 background-color: v.$colour;
@@ -83,7 +92,6 @@
             }
         }
     }
-
     &_infos {
         display: flex;
         justify-content: space-between;
