@@ -3,6 +3,9 @@
 @mixin pad10{
     padding: 10px;
 }
+@mixin mar10{
+    margin-left: 10px;
+}
 @mixin text-points{
     text-overflow: ellipsis;
     overflow: hidden;
