@@ -29,14 +29,7 @@ header{
         margin: 10px 0;
     }
     button{
-        background: linear-gradient(v.$colour-secondary, v.$colour-primary);
-        color: #fff;
-        border: none;
-        padding: 15px;
-        border-radius: 25px;
-        font-size: 13px;
-        margin-top: 15px;
-        box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+        @include m.btn_linear
     }
 }
 
