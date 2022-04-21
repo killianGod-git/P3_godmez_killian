@@ -115,7 +115,6 @@
             @include m.text-points
         }
         @include m.desktop-screen{
-            max-width: 200px;
             width: 70%;
         }
     }
@@ -127,6 +126,7 @@
         width: 30%;
         justify-content: flex-end;
         p{
+            margin-top: 20px;
             margin-right: 5px;
         }
         
