@@ -10,7 +10,16 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-
+}
+@mixin btn_linear{
+    background: linear-gradient($colour-secondary, $colour-primary);
+        color: #fff;
+        border: none;
+        padding: 15px;
+        border-radius: 25px;
+        font-size: 13px;
+        margin-top: 15px;
+        box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
 }
 @mixin fond-sombre($colour: fond-gris($colour)){
     background-color: $colour;
