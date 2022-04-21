@@ -14,59 +14,67 @@
     background-color: darken(v.$colour, 2%);
     z-index: 1;
     position: relative;
-    &_section{
+
+    &_section {
         display: flex;
         flex-direction: column;
         margin: 10px;
-        @include m.desktop-screen{
+
+        @include m.desktop-screen {
             flex-direction: row;
             justify-content: space-evenly;
         }
     }
+
     &_header {
         padding: 5px 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        @include m.tablet-screen{
+
+        @include m.desktop-screen {
             justify-content: center;
         }
-        h2{
-            font-size: 1.5rem;
+
+        h2 {
+
+            font-size: 3.5rem;
         }
+
         i {
             font-size: 20px;
             margin-left: 5px;
+            @include m.desktop-screen{
+                @include m.mar10;
+                font-size: 2rem;
+            }
         }
     }
 
     &_content {
         margin: 20px 0;
+        cursor: pointer;
 
-        @include m.tablet-screen{
+        @include m.desktop-screen {
             text-align: center;
-            flex-basis: 30%;
+            width: 300px;
         }
-        hr{
+
+        hr {
             border: none;
             background-color: v.$colour-tertiaire;
             width: 5%;
             margin: 0;
             height: 3px;
-            @include m.tablet-screen{
+
+            @include m.desktop-screen {
                 margin: 0 auto;
+                width: 25%;
             }
         }
     }
-    &_plat{
-        width: 85%;
-        h3, p{
-            @include m.text-points
-        }
-    }
-    &_prix{
-        width: 10%;
-    }
+    
+
     &_choix {
         display: flex;
         justify-content: space-between;
@@ -77,14 +85,21 @@
         overflow: hidden;
         text-align: initial;
         height: 90px;
+        &:hover, &:focus{
+            .menu_checked{
+                display: flex;
+            }
+        }
         .menu_checked {
             background-color: v.$colour-tertiaire;
             display: flex;
             align-items: center;
             justify-content: center;
             transition-duration: .5s;
-            padding: 50px 30px;
-            i{
+            height: 100px;
+            width: 60%;
+            display: none;
+            i {
                 color: v.$colour-tertiaire;
                 background-color: v.$colour;
                 padding: 5px;
@@ -92,12 +107,32 @@
             }
         }
     }
+
     &_infos {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 95%;
-        padding: 10px;
+        width: 65%;
+        @include m.mar10;
+        h3,p {
+            @include m.text-points
+        }
+        @include m.desktop-screen{
+            max-width: 200px;
+            width: 70%;
+        }
     }
 
+    &_prix {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        width: 30%;
+        justify-content: flex-end;
+        p{
+            margin-right: 5px;
+        }
+        
+    }
+
+}
+.titreSection{
+    font-size: 2.5rem;
 }
