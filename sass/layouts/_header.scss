@@ -29,7 +29,10 @@ header{
         margin: 10px 0;
     }
     button{
-        @include m.btn_linear
+        @include m.btn_linear;
+        &:hover{
+            @include m.hover_btn;
+        }
     }
 }
 

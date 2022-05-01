@@ -67,7 +67,6 @@
 
             i {
                 font-size: 20px;
-                color: #000;
                 margin-top: 3px;
             }
 
@@ -92,6 +91,35 @@
             @include m.tablet-screen{
                 font-size: 0.7rem;
             }
+        }
+    }
+}
+.favori{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: #000;
+    .no_bg{
+        position: absolute;
+        transition: all 800ms ease-in-out;
+    }
+    .full_bg{
+        transform: scale(0);
+        transform-origin: bottom;
+        transition: all 500ms ease-in-out;
+        background: linear-gradient(to bottom, v.$colour-secondary 0%, v.$colour-primary 100%);
+	    -webkit-background-clip: text;
+	    -webkit-text-fill-color: transparent;
+    }
+    &:hover{
+        .full_bg{
+            transform: scale(1);
+        }
+        .no_bg{
+            background: linear-gradient(to bottom, v.$colour-secondary 0%, v.$colour-primary 100%);
+	        -webkit-background-clip: text;
+	        -webkit-text-fill-color: transparent;
         }
     }
 }

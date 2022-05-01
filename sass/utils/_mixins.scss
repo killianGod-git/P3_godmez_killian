@@ -21,6 +21,10 @@
         margin-top: 15px;
         box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
 }
+@mixin hover_btn {
+    background: linear-gradient(lighten($colour-secondary, 5%), lighten($colour-primary, 5%));
+    box-shadow: 5px 5px 7px 3px rgba(0,0,0,.5);
+}
 @mixin fond-sombre($colour: fond-gris($colour)){
     background-color: $colour;
   }
