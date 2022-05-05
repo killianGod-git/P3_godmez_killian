@@ -5,6 +5,7 @@
         text-align: center;
     }
     &_card{
+        cursor: pointer;
         display: flex;
         align-items: center;
         @include m.fond-sombre;

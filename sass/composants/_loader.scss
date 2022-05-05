@@ -1,0 +1,72 @@
+@use "../utils/mixins" as m ;
+@use "../utils/variables" as v;
+
+.loader{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: v.$colour;
+    animation: loader 1s;
+    animation-delay: 1.5s;
+    z-index: 10000;
+    animation-fill-mode: forwards;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    h2{
+      font-family: v.$font-titre;
+      color: transparent;
+      position: absolute;
+      font-size: 5rem;
+      .violet{
+        opacity: 0;
+        color: v.$colour-primary;
+        animation: text_opacity 0.5s ;
+        animation-fill-mode: forwards;
+      }
+      .rose{
+        opacity: 0;
+        color: v.$colour-secondary;
+        animation: text_opacity 0.5s ;
+        animation-fill-mode: forwards;
+        animation-delay: 0.3s;
+      }
+      .vert{
+        opacity: 0;
+        color: v.$colour-tertiaire;
+        animation: text_opacity 0.5s ;
+        animation-fill-mode: forwards;
+        animation-delay: 0.7s;
+      }
+      .violet_contours{
+        -webkit-text-stroke: 1px v.$colour-primary;
+      }
+      .rose_contours{
+        -webkit-text-stroke: 1px v.$colour-secondary;
+      }
+      .vert_contours{
+        -webkit-text-stroke: 1px v.$colour-tertiaire;
+      }
+    }
+}
+  @keyframes loader {
+    0%{
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      z-index: -10;
+    }
+  } 
+
+  @keyframes text_opacity{
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+  

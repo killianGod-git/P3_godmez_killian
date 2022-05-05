@@ -57,7 +57,7 @@
 
         @include m.desktop-screen {
             text-align: center;
-            width: 300px;
+            width: 30%;
         }
 
         hr {
@@ -85,9 +85,25 @@
         overflow: hidden;
         text-align: initial;
         height: 90px;
+        animation:  menu_anim 1s;
+        animation-delay: 2s;
+        animation-fill-mode: both;
         &:hover, &:focus{
+            .menu_infos{
+                    width: 65%;
+                }
+            
+            .menu_prix p{
+                margin-right: 5px;
+                transform: translateX(-50%);
+            }
             .menu_checked{
                 display: flex;
+                transform: scale( 1);
+                width: 60%;
+                i{
+                    display: inline-block;
+                }
             }
         }
         .menu_checked {
@@ -95,39 +111,47 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition-duration: .5s;
             height: 100px;
-            width: 60%;
-            display: none;
+            width: 0%;
+            transform: scale(0, 1);
+            transform-origin: right;
+            transition: 300ms ease-in-out;
+            // display: none;
+            @include m.tablet-screen{
+                // width: 40%;
+            }
+            @include m.desktop-screen{
+                // width: 60%;
+            }
             i {
                 color: v.$colour-tertiaire;
                 background-color: v.$colour;
                 padding: 5px;
                 border-radius: 30px;
+                display: none;
             }
         }
     }
 
     &_infos {
-        width: 65%;
+        width: 70%;
         @include m.mar10;
         h3,p {
             @include m.text-points
         }
-        @include m.desktop-screen{
-            width: 70%;
-        }
+        
     }
 
     &_prix {
         display: flex;
-        gap: 15px;
         align-items: center;
         width: 30%;
         justify-content: flex-end;
         p{
             margin-top: 20px;
-            margin-right: 5px;
+            margin-right: 15px;
+            transform: translateX(0);
+            transition: transform 300ms;
         }
         
     }
@@ -149,5 +173,19 @@
     button{
         width: 100%;
         @include m.btn_linear;
+        &:hover{
+                @include m.hover_btn;
+        }
+    }
+}
+
+@keyframes menu_anim{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
     }
 }
