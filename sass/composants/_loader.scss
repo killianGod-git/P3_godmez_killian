@@ -20,13 +20,13 @@
       color: transparent;
       position: absolute;
       font-size: 5rem;
-      .rose{
+      .violet{
         opacity: 0;
         color: v.$colour-primary;
         animation: text_opacity 0.5s ;
         animation-fill-mode: forwards;
       }
-      .violet{
+      .rose{
         opacity: 0;
         color: v.$colour-secondary;
         animation: text_opacity 0.5s ;
@@ -40,10 +40,10 @@
         animation-fill-mode: forwards;
         animation-delay: 0.7s;
       }
-      .rose_contours{
+      .violet_contours{
         -webkit-text-stroke: 1px v.$colour-primary;
       }
-      .violet_contours{
+      .rose_contours{
         -webkit-text-stroke: 1px v.$colour-secondary;
       }
       .vert_contours{

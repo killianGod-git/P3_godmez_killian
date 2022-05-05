@@ -85,6 +85,9 @@
         overflow: hidden;
         text-align: initial;
         height: 90px;
+        animation:  menu_anim 1s;
+        animation-delay: 2s;
+        animation-fill-mode: both;
         &:hover, &:focus{
             .menu_infos{
                     width: 65%;
@@ -173,5 +176,16 @@
         &:hover{
                 @include m.hover_btn;
         }
+    }
+}
+
+@keyframes menu_anim{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
     }
 }
