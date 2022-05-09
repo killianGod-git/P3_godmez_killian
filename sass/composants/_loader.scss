@@ -8,7 +8,7 @@
     left: 0;
     top: 0;
     background-color: v.$colour;
-    animation: loader 1s;
+    animation: loader 0.5s;
     animation-delay: 1.5s;
     z-index: 10000;
     animation-fill-mode: forwards;
@@ -42,12 +42,20 @@
       }
       .violet_contours{
         -webkit-text-stroke: 1px v.$colour-primary;
+        animation: border_text_opacity 1s;
+        animation-fill-mode: forwards;
       }
       .rose_contours{
         -webkit-text-stroke: 1px v.$colour-secondary;
+        animation: border_text_opacity 1s;
+        animation-fill-mode: forwards;
+        animation-delay: 0.2s;
       }
       .vert_contours{
         -webkit-text-stroke: 1px v.$colour-tertiaire;
+        animation: border_text_opacity 1s;
+        animation-fill-mode: forwards;
+        animation-delay: 0.7s;
       }
     }
 }
@@ -67,6 +75,15 @@
     }
     to{
       opacity: 1;
+    }
+  }
+
+  @keyframes border_text_opacity {
+    from{
+      opacity: 1;
+    }
+    to{
+      opacity: 0;
     }
   }
   
