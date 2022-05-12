@@ -6,6 +6,10 @@
 @mixin mar10{
     margin-left: 10px;
 }
+
+@mixin transi500 {
+    transition: all 500ms ease-in-out;
+}
 @mixin text-points{
     text-overflow: ellipsis;
     overflow: hidden;
@@ -21,7 +25,6 @@
         margin-top: 15px;
         box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
         transition: ease-in-out;
-        transition-duration: 0s;
         transition-duration: 0.3s;
 }
 @mixin hover_btn {
