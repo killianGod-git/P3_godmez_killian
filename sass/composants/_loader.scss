@@ -6,11 +6,11 @@
     height: 100%;
     width: 100%;
     left: 0;
-    top: 0;
+    top: 0; 
+    z-index: 10000;
     background-color: v.$colour;
     animation: loader 0.5s;
     animation-delay: 1.5s;
-    z-index: 10000;
     animation-fill-mode: forwards;
     display:flex;
     align-items:center;
